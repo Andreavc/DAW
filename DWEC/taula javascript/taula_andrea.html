@@ -1,0 +1,1791 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8">
+<title> Taula JavaScript</title>
+
+	<style>
+		body{
+			font-family:Verdana;
+			font-family:12px;
+			width: 100%;
+		}
+		th {
+			background-color:#F5A9A9;
+
+		}
+
+		pre {
+			font-family:Verdana;
+			font-size:12px;
+			font-style: italic;
+		}
+		.myTable {
+			border-style: solid;
+			border-color: #F6CECE;
+			border-spacing: 0;
+		}
+		td {
+			border-style: solid;
+			border-color: #F6CECE;
+			border-spacing: 0
+		}
+		pre{
+		margin: 0;
+		background-color: rgba(0,0,0,0.1);
+		padding: 15px;
+		}
+	</style>
+	
+</head>
+
+<body>
+	<table class="myTable">
+		<thead>
+			<th>Concepte</th>
+			<th>Codi Font</th>
+			<th>Resultat</th>
+		</thead>	
+		<tr>
+			<td>Variables</td>
+			<td>
+				<pre>
+					<code>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+
+&lt;p id="demo"&gt;&lt;/p&gt;
+
+&lt;script&gt;
+var x = 11;
+var y = 8;
+document.getElementById("demo").innerHTML =(x + y)*x;
+&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+					</code>
+				</pre>
+			</td>
+			<td>
+				<p id="demo"></p>
+				<script>
+					var x = 11;
+					var y = 8;
+					document.getElementById("demo").innerHTML = (x + y)*x;
+				</script>
+			</td>
+		</tr>
+		<tr>
+			<td rowspan="4">Data Type</td>
+			<td>
+				<pre>
+					<code>
+						<p> Strings: </p>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+
+&lt;p id="demo1"&gt;&lt;/p&gt;
+
+&lt;script&gt;
+var carName1 = "Golf";
+var carName2 = 'Golf';
+var answer1 = "It's alright";
+var answer2 = "She is called 'Maria'";
+var answer3 = "She is called "Maria"';
+
+document.getElementById("demo1").innerHTML =
+carName1 + "&lt;br&gt;" + 
+carName2 + "&lt;br&gt;" + 
+answer1 + "&lt;br&gt;" + 
+answer2 + "&lt;br&gt;" + 
+answer3;
+&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+					</pre>
+				</code>
+			</td>
+			<td>
+				<p id="demo1"></p>
+				<script>
+					var carName1 = "Golf";
+					var carName2 = 'Golf';
+					var answer1 = "It's alright";
+					var answer2 = "She is called 'Maria'";
+					var answer3 = 'She is called "Maria"';
+
+					document.getElementById("demo1").innerHTML =
+					carName1 + "<br>" + 
+					carName2 + "<br>" + 
+					answer1 + "<br>" + 
+					answer2 + "<br>" + 
+					answer3;
+				</script>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<pre>
+					<code>
+						<p> Numbers: </p>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+
+&lt;p id="demo2"&gt;&lt;/p&gt;
+
+&lt;script&gt;
+var x1 = 40.00;
+var x2 = 40;
+var y = 123e5;
+var z = 123e-5;
+
+document.getElementById("demo2").innerHTML = x1 + "&lt;br&gt;" + x2 + "&lt;br&gt;" + y + "&lt;br&gt;" + z
+&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+					</pre>
+				</code>
+			</td>
+			<td>
+				<p id="demo2"></p>
+				<script>
+					var x1 = 40.00;
+					var x2 = 40;
+					var y = 123e5;
+					var z = 123e-5;
+					document.getElementById("demo2").innerHTML = x1 + "<br>" + x2 + "<br>" + y + "<br>" + z
+				</script>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<pre>
+					<code>
+						<p>Arrays: </p>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+
+&lt;p id="demo3"&gt;&lt;/p&gt;
+
+&lt;script&gt;
+var cars = ["Saab","Volvo","BMW"];
+
+document.getElementById("demo3").innerHTML = cars[0];
+&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+					</pre>
+				</code>
+			</td>
+			<td>
+				<p id="demo3"></p>
+				<script>
+					var cars = ["Saab","Volvo","BMW"];
+					document.getElementById("demo3").innerHTML = cars[0];
+				</script>
+			</td>
+		</tr>			
+		<tr>
+			<td>
+				<pre>
+					<code>
+						<p> Objects: </p>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+	&lt;body&gt;
+	&lt;p id="demo4"&gt;&lt;/p&gt;
+
+	&lt;script&gt;
+	var person = {
+		firstName : "John",
+		lastName  : "Doe",
+		age       : 50,
+		eyeColor  : "blue"
+	};
+
+	document.getElementById("demo4").innerHTML =
+	person.firstName + " is " + person.age + " years old.";
+	&lt;/script&gt;
+
+	&lt;/body&gt;
+&lt;/html&gt;
+
+
+				</code>
+			</pre>
+		</td>
+		<td>
+			<p id="demo4"></p>
+			<script>
+				var person = {
+					firstName : "John",
+					lastName  : "Doe",
+					age       : 50,
+					eyeColor  : "blue"
+				};
+
+				document.getElementById("demo4").innerHTML =
+				person.firstName + " is " + person.age + " years old.";
+			</script>
+		</td>
+	</tr>
+	<tr>
+		<td Rowspan="3">Objects</td>
+		<td>
+			<pre>
+				<code>
+					<p> Definition: </p>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+
+&lt;p&gt;Creating a JavaScript Object.&lt;/p&gt;
+
+&lt;p id="demo5"&gt;&lt;/p&gt;
+
+&lt;script&gt;
+var person = {
+firstName : "John",
+lastName  : "Doe",
+age       : 50,
+eyeColor  : "blue"
+};
+
+document.getElementById("demo5").innerHTML =
+person.firstName + " is " + person.age + " years old.";
+&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+			</pre>
+		</code>
+	</td>
+	<td>
+		<p id="demo5"></p>
+		<script>
+			var person = {
+				firstName : "John",
+				lastName  : "Doe",
+				age       : 50,
+				eyeColor  : "blue"
+			};
+			document.getElementById("demo5").innerHTML =
+			person.firstName + " is " + person.age + " years old.";
+		</script>
+	</td>
+</tr>
+<tr>
+	<td>
+		<pre>
+			<code>
+				<p> Object Properties: </p>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+lt;body&gt;
+
+&lt;p&gt;
+There are two different ways to access an object property: 
+&lt;/p&gt;
+&lt;p&gt;
+You can use .property or ["property"].
+&lt;/p&gt;
+
+&lt;p id="demo"&gt;&lt;/p&gt;
+
+&lt;script&gt;
+var person = {
+	firstName: "John",
+	lastName : "Doe",
+	id       :  5566
+	};
+document.getElementById("demo").innerHTML =
+person.firstName + " " + person.lastName;
+&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+		</pre>
+	</code>
+</td>
+<td>
+	<p id="demo6"></p>
+	<script>
+		var person = {
+			firstName : "John",
+			lastName  : "Doe",
+			age       : 50,
+			eyeColor  : "blue"
+		};
+		document.getElementById("demo6").innerHTML =
+		person.firstName + " is " + person.age + " years old.";
+	</script>
+</td>
+</tr>
+<tr>
+	<td>
+		<pre>
+			<code>
+				<p> Object Methods:  </p>
+
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+				
+&lt;p&gt;Creating and using an object method.&lt;/p&gt;
+				
+&lt;p&gt;An object method is a function definition stored as a property value.&lt;/p&gt;
+
+&lt;p id="demo"&gt;&lt;/p&gt;
+
+&lt;script&gt;
+var person = {
+firstName: "John",
+lastName : "Doe",
+id       : 5566,
+fullName : function() {
+return this.firstName + " " + this.lastName;
+}
+};
+document.getElementById("demo").innerHTML = person.fullName;
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+
+	</code>
+</pre>
+</td>
+<td>
+	<p id="demo7"></p>
+	<script>
+		var person = {
+			firstName: "John",
+			lastName : "Doe",
+			id       : 5566,
+			fullName : function() {
+				return this.firstName + " " + this.lastName;
+			}
+		};
+
+		document.getElementById("demo7").innerHTML = person.fullName;
+	</script>
+</td>
+</tr>
+<tr>
+	<td>Functions</td>
+	<td>
+		<pre>
+			<code>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+&lt;p&gt;This example calls a function which performs a calculation, and returns the result:&lt;/p&gt;
+
+&lt;p id="demo"&gt;&lt;/p&gt;
+
+&lt;script&gt;
+function myFunction(a, b) {
+return a * b;
+}
+document.getElementById("demo8").innerHTML = myFunction(4, 3);
+&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+		</code>
+	</pre>
+</td>
+<td>
+	<p id="demo8"></p>
+	<script>
+		function myFunction(a, b) {
+			return a * b;
+		}
+		document.getElementById("demo8").innerHTML = myFunction(4, 3); 
+	</script>
+</td>
+</tr>
+<tr>
+	<td rowspan="7">Operators</td>
+	<td>
+		<pre>
+			<p> JavaScript Arithmetic Operators: </p>
+		</pre>
+
+		<img src="http://oi60.tinypic.com/154j4pg.jpg">
+	</td>
+	<td>
+		<p id="demo8"></p>
+		<script></script>
+	</td>
+</tr>
+<tr>
+	<td>
+		<pre>
+			<p> JavaScript Assignment Operators: </p>
+		</pre>
+		<img src="http://oi60.tinypic.com/154j4pg.jpg">
+	</td>
+	<td>
+		<p id="demo8"></p>
+		<script></script>
+	</td>
+</tr>
+</tr>
+<tr>
+	<td>
+		<pre>
+			<code>
+				<p>JavaScript String Operators: </p>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+
+&lt;p&gt;The + operator concatenates (adds) strings.&lt;/p&gt;
+
+&lt;button onclick="myFunction1()"&gt;Try it&lt;/button&gt;
+
+&lt;p id="demo9"&gt;&lt;/p&gt;
+				
+&lt;script&gt;
+function myFunction1() {
+var txt1 = "What a very";
+var txt2 = "nice day";
+document.getElementById("demo9").innerHTML = txt1 + txt2;
+}
+&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+		</pre>
+	</code>
+</td>
+<td>
+	<p id="demo9"></p>
+	<button onclick="myFunction1()">Try it</button>
+	<script>
+		function myFunction1() {
+			var txt1 = "What a very";
+			var txt2 = " nice day";
+			document.getElementById("demo9").innerHTML = txt1 + txt2;
+		}
+	</script>
+</td>
+</tr>			
+<tr>
+	<td>
+		<pre>
+			<code>
+				<p> Adding Strings and Numbers: </p>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+
+&lt;p&gt;Adding a number and a string, returns a string.&lt;/p&gt;
+
+&lt;button onclick="myFunction2()"&gt;Try it&lt;/button&gt;
+
+&lt;p id="demo"&gt;&lt;/p&gt;
+
+&lt;script&gt;
+function myFunction2() {
+var x = 5 + 5;
+var y = "5" + 5;
+var z = "Hello" + 5;
+
+document.getElementById("demo10").innerHTML =
+x + "&lt;br&gt;" +
+y + "&lt;br&gt;" +
+z;
+}
+&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+		</code>
+	</pre>
+</td>
+<td>
+	<p id="demo10"></p>
+	<button onclick="myFunction2()">Try it</button>
+	<script>
+		function myFunction2() {
+			var x = 5 + 5;
+			var y = "5" + 5;
+			var z = "Hello" + 5;
+
+			document.getElementById("demo10").innerHTML =
+			x + "<br>" +
+			y + "<br>" +
+			z;
+		}
+	</script>
+</td>
+</tr>
+<tr>
+	<td>
+		<pre>
+			<code>
+				<p> JavaScript Bitwise Operators: </p>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+
+&lt;p&gt;The bitwise operator & returna a logical AND.&lt;/p&gt;
+
+&lt;button onclick="myFunction3()"&gt;Try it&lt;/button&gt;
+
+&lt;p id="demo"&gt;&lt;/p&gt;
+
+&lt;script&gt;
+function myFunction3() {
+document.getElementById("demo11").innerHTML = 5 & 1;
+}
+&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+			<img src=" http://oi60.tinypic.com/25ezdqp.jpg">
+
+
+		</code>
+	</pre>
+</td>
+<td>
+	<p id="demo11"></p>
+	<button onclick="myFunction3()">Try it</button>
+	<script>
+		function myFunction3() {
+			document.getElementById("demo11").innerHTML = 5 & 1;
+		}
+	</script>
+</td>
+</tr>
+
+<tr>
+	<td>
+		<pre>
+			<code>
+				<p> The type of operator: </p>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+
+&lt;p&gt;The typeof operator returns the type of a variable or expression.&lt;/p&gt;
+
+&lt;button onclick="myFunction4()"&gt;Try it&lt;/button&gt;
+
+&lt;p id="demo"&gt;&lt;/p&gt;
+
+&lt;script&gt;
+function myFunction4() {
+var x = 5;
+var y = "John";
+document.getElementById("demo12").innerHTML = 
+typeof x + "&lt;br&gt;" + 
+typeof 5 + "&lt;br&gt;" +    
+typeof (5+5) + "&lt;br&gt;" +
+typeof y + "&lt;br&gt;" + 
+typeof "5" + "&lt;br&gt;" +
+typeof "John" + "&lt;br&gt;" +
+typeof ("John" + " " + "Doe") + "&lt;br&gt;" +
+typeof false + "&lt;br&gt;" +
+typeof (5 &gt; 3) + "&lt;br&gt;" +
+typeof (3 &gt; 5) + "&lt;br&gt;" +    
+typeof [1,2,3,4] + "&lt;br&gt;" +
+typeof {name:'john', age:34};
+}
+&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+		</code>
+	</pre>
+</td>
+<td>
+	<p id="demo12"></p>
+	<button onclick="myFunction4()">Try it</button>
+	<script>
+		function myFunction4() {
+			var x = 5;
+			var y = "John";
+			document.getElementById("demo12").innerHTML = 
+			typeof x + "<br>" + 
+			typeof 5 + "<br>" +    
+			typeof (5+5) + "<br>" +
+			typeof y + "<br>" + 
+			typeof "5" + "<br>" +
+			typeof "John" + "<br>" +
+			typeof ("John" + " " + "Doe") + "<br>" +
+			typeof false + "<br>" +
+			typeof (5 > 3) + "<br>" +
+			typeof (3 > 5) + "<br>" +    
+			typeof [1,2,3,4] + "<br>" +
+			typeof {name:'john', age:34};
+		}
+	</script>
+</td>
+</tr>
+<tr>
+	<td>
+		<pre>
+			<code>
+				<p> The delete Operator: </p>
+				The delete operator can be used to delete properties from objects:
+				var person = {firstName:"John", lastName:"Doe", age:50, eyeColor:"blue"};
+				delete person.age;
+				The delete operator is designed to be used on object properties. It has no effect on variables or functions.
+				The delete operator should not be used on predefined JavaScript object properties. It can crash your application.
+			</code>
+		</pre>
+	</td>
+	<td>
+		<p id="demo12"></p>
+		<script></script>
+	</td>
+
+
+</tr>	
+
+<tr>
+	<td>Functions</td>
+	<td>
+		<pre>
+			<code>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+
+&lt;p&gt;This example calls a function which performs a calculation, and returns the result:&lt;/p&gt;
+
+&lt;p id="demo"&gt;&lt;/p&gt;
+
+&lt;script&gt;
+function myFunction0(a, b) {
+return a * b;
+}
+document.getElementById("demo8").innerHTML = myFunction0(4, 3);
+&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+		</code>
+	</pre>
+</td>
+<td>
+	<p id="demo8"></p>
+	<script>
+		function myFunction0(a, b) {
+			return a * b;
+		}
+		document.getElementById("demo8").innerHTML = myFunction(4, 3); 
+	</script>
+</td>
+</tr>
+<tr>
+<td rowspan="11">Comparisons</td>
+	<td>
+		<pre>
+			<code>
+			<p> Equal to == (false): </p>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+
+&lt;p&gt;Assign 5 to x, and display the value of the comparison (x == 8):&lt;/p&gt;
+
+&lt;button onclick="myFunction5()"&gt;Try it&lt;/button&gt;
+
+&lt;p id="demo13"&gt;&lt;/p&gt;
+
+&lt;script&gt;
+function myFunction5() {
+    var x = 5;
+    document.getElementById("demo13").innerHTML = (x == 8);
+}
+&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+			</code>
+		</pre>
+		
+	</td>
+						
+	<td>
+		<p id="demo13"></p>
+			<button onclick="myFunction5()">Try it</button>
+				<script>
+				function myFunction5() {
+					var x = 5;
+					document.getElementById("demo13").innerHTML = (x === "5");
+				}
+				</script>
+	</td>
+</tr>			
+
+<tr>
+	<td>
+		<pre>
+			<code>
+				<p> Equal to == (true): </p>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+
+&lt;p&gt;Assign 5 to x, and display the value of the comparison (x == 5):&lt;/p&gt;
+
+&lt;button onclick="myFunction6()"&gt;Try it&lt;/button&gt;
+
+&lt;p id="demo"&gt;&lt;/p&gt;
+
+&lt;script&gt;
+function myFunction6() {
+    var x=5;
+    document.getElementById("demo13").innerHTML = (x == 5);
+}
+&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+			</code>
+		</pre>
+	</td>
+	<td>
+		<p id="demo13"></p>
+			<button onclick="myFunction6()">Try it</button>
+			<script>
+				function myFunction6() {
+					var x=5;
+					document.getElementById("demo13").innerHTML = (x == 5);
+				}
+			</script>
+	</td>
+</tr>
+
+<tr>
+	<td>
+		<pre>
+			<code>
+				<p> equal value and equal type ===(false): </p>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+
+&lt;p&gt;Assign 5 to x, and display the value of the comparison (x === "5").&lt;/p&gt;
+
+&lt;button onclick="myFunction7()"&gt;Try it&lt;/button&gt;
+
+&lt;p id="demo"&gt;&lt;/p&gt;
+
+&lt;script&gt;
+function myFunction7() {
+    var x = 5;
+    document.getElementById("demo14").innerHTML = (x === "5");
+}
+&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+
+			</code>
+		</pre>
+	</td>
+	<td>
+		<p id="demo50"></p>
+			<button onclick="myFunction7()">Try it</button>
+		<script>
+			function myFunction7() {
+			var x = 5;
+			document.getElementById("demo50").innerHTML = (x === "5");
+		}
+		</script>
+	</td>
+</tr>
+<tr>
+	<td>
+		<pre>
+			<code>
+				<p> equal value and equal type ===(true): </p>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+
+&lt;p&gt;Assign 5 to x, and display the value of the comparison (x === 5):&lt;/p&gt;
+
+&lt;button onclick="myFunction8()"&gt;Try it&lt;/button&gt;
+
+&lt;p id="demo"&gt;&lt;/p&gt;
+
+&lt;script&gt;
+function myFunction8() {
+    var x = 5;
+    document.getElementById("demo14").innerHTML = (x === 5);
+}
+&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+			</code>
+		</pre>
+	</td>
+	<td>
+		<p id="demo14"></p>
+			<button onclick="myFunction8()">Try it</button>
+			<script>
+				function myFunction8() {
+					var x = 5;
+					document.getElementById("demo14").innerHTML = (x === 5);
+				}
+			</script>
+	</td>
+</tr>
+<tr>
+	<td>
+		<pre>
+			<code>
+				<p> not equal !=:  </p>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+
+&lt;p&gt;Assifn 5 to x, and display the value of the comparison (x != 8).&lt;/p&gt;
+
+&lt;button onclick="myFunction9()"&gt;Try it&lt;/button&gt;
+
+&lt;p id="demo"&gt;&lt;/p&gt;
+
+&lt;script&gt;
+function myFunction9() {
+    var x = 5;
+    document.getElementById("demo15").innerHTML = (x != 8);
+}
+&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+
+			</code>
+		</pre>
+	</td>
+	<td>
+		<p id="demo15"></p>
+			<button onclick="myFunction9()">Try it</button>
+			<script>
+				function myFunction9() {
+				var x = 5;
+				document.getElementById("demo15").innerHTML = (x != 8);
+			}
+			</script>
+	</td>
+</tr>
+<tr>
+	<td>
+		<pre>
+			<code>
+				<p> not equal value or not equal type !== (false):  </p>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+
+&lt;p&gt;Assign 5 to x, and return the value of the comparison (x !== 5):&lt;/p&gt;
+
+&lt;button onclick="myFunction10()"&gt;Try it&lt;/button&gt;
+
+&lt;p id="demo"&gt;&lt;/p&gt;
+
+&lt;script&gt;
+function myFunction10() {
+    var x = 5;
+    document.getElementById("demo16").innerHTML = (x !== 5);
+}
+&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+			</code>
+		</pre>
+	</td>
+	<td>
+		<p id="demo51"></p>
+			<button onclick="myFunction10()">Try it</button>
+				<script>
+					function myFunction10() {
+					var x = 5;
+					document.getElementById("demo51").innerHTML = (x !== 5);
+				}
+				</script>
+	</td>
+</tr>
+<tr>
+	<td>
+		<pre>
+			<code>
+				<p> not equal value or not equal type !== (true):  </p>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+
+&lt;p&gt;Assign 5 to x, and display the value of the comparison (x !== "5"):&lt;/p&gt;
+
+&lt;button onclick="myFunction11()"&gt;Try it&lt;/button&gt;
+
+&lt;p id="demo"&gt;&lt;/p&gt;
+
+&lt;script&gt;
+function myFunction11() {
+    var x = 5;
+    document.getElementById("demo16").innerHTML = (x !== "5");
+}
+&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+			</code>
+		</pre>
+	</td>
+	<td>
+		<p id="demo16"></p>
+			<button onclick="myFunction11()">Try it</button>
+			<script>
+				function myFunction11() {
+				var x = 5;
+				document.getElementById("demo16").innerHTML = (x !== "5");
+			}
+			</script>
+	</td>
+</tr>
+<tr>
+	<td>
+		<pre>
+			<code>
+				<p>  greater than > (false): </p>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+
+&lt;p&gt;Assign 5 to x, and display the value of the comparison (x &gt; 8).&lt;/p&gt;
+ 
+&lt;button onclick="myFunction12()"&gt;Try it&lt;/button&gt;
+
+&lt;p id="demo"&gt;&lt;/p&gt;
+
+&lt;script&gt;
+function myFunction12() {
+    var x = 5;
+    document.getElementById("demo17").innerHTML = (x &gt; 8);
+}
+&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+			</code>
+		</pre>
+	</td>
+	<td>
+		<p id="demo17"></p>
+			<button onclick="myFunction12()">Try it</button>
+		<script>
+			function myFunction12() {
+			var x = 5;
+			document.getElementById("demo17").innerHTML = (x > 8);
+		}
+		</script>
+	</td>
+</tr>
+<tr>
+	<td>
+		<pre>
+			<code>
+				<p>  less than < (true): </p>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+
+&lt;p&gt;Assign 5 to x, and display the value of the comparison (x &lt; 8).&lt;/p&gt;
+
+&lt;button onclick="myFunction13()"&gt;Try it&lt;/button&gt;
+
+&lt;p id="demo"&gt;&lt;/p&gt;
+
+&lt;script&gt;
+function myFunction13() {
+    var x = 5;
+    document.getElementById("demo18").innerHTML = (x &lt; 8);
+}
+&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+			</code>
+		</pre>
+	</td>
+	<td>
+		<p id="demo18"></p>
+			<button onclick="myFunction13()">Try it</button>
+			<script>
+				function myFunction13() {
+				var x = 5;
+				document.getElementById("demo18").innerHTML = (x < 8);
+			}
+			</script>
+	</td>
+</tr>
+<tr>
+	<td>
+		<pre>
+			<code>
+				<p>  greater than or equal to >= (false): </p>
+
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+
+&lt;p&gt;Assign 5 to x, and display the value of the comparison (x &gt;= 8).&lt;/p&gt;
+
+&lt;button onclick="myFunction14()"&gt;Try it&lt;/button&gt;
+
+&lt;p id="demo"&gt;&lt;/p&gt;
+
+&lt;script&gt;
+function myFunction14() {
+    var x = 5;
+    document.getElementById("demo19").innerHTML = (x &gt;= 8);
+}
+&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+			</code>
+		</pre>
+	</td>
+	<td>
+		<p id="demo19"></p>
+			<button onclick="myFunction14()">Try it</button>
+			<script>
+				function myFunction14() {
+				var x = 5;
+				document.getElementById("demo19").innerHTML = (x >= 8);
+			}
+			</script>
+	</td>
+</tr>
+<tr>
+	<td>
+		<pre>
+			<code>
+				<p>   less than or equal to <= (true):  </p>
+
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+
+&lt;p&gt;Assign 5 to x, and display the value of the comparison (x &lt;= 8).&lt;/p&gt;
+
+&lt;button onclick="myFunction15()"&gt;Try it&lt;/button&gt;
+
+&lt;p id="demo"&gt;&lt;/p&gt;
+
+&lt;script&gt;
+function myFunction15() {
+    var x = 5;
+    document.getElementById("demo20").innerHTML = (x &lt;= 8);
+}
+&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+
+			</code>
+		</pre>
+	</td>
+	<td>
+		<p id="demo20"></p>
+			<button onclick="myFunction15()">Try it</button>
+			<script>
+			function myFunction15() {
+			var x = 5;
+			document.getElementById("demo20").innerHTML = (x <= 8);
+				}
+			</script>
+	</td>
+</tr>
+<tr>
+	<td rowspan="3">Conditions</td>
+		<td>
+			<pre>
+				<code>
+					<p> If Statement: </p>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+
+&lt;p&gt;Display "Good day", only if the time is less than 20:00:&lt;/p&gt;
+
+&lt;button onclick="myFunction16()"&gt;Try it&lt;/button&gt;
+
+&lt;p id="demo"&gt;&lt;/p&gt;
+
+&lt;script&gt;
+function myFunction() {
+    if (new Date().getHours() &lt; 20) {
+        document.getElementById("demo21").innerHTML = "Good day";
+    }
+}
+&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+					
+				</code>
+			</pre>
+		</td>
+		<td>
+			<p id="demo21"></p>
+				<button onclick="myFunction16()">Try it</button>
+				<script>
+					function myFunction16() {
+						if (new Date().getHours() < 20) {
+							document.getElementById("demo21").innerHTML = "Good day";
+						}
+					}
+				</script>
+		</td>
+</tr>
+<tr>
+	<td>
+		<pre>
+			<code>
+				<p> Else Statement:</p>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+
+&lt;p&gt;Click the button to display a time-based greeting:&lt;/p&gt;
+
+&lt;button onclick="myFunction17()"&gt;Try it&lt;/button&gt;
+&lt;p id="demo"&gt;&lt;/p&gt;
+
+&lt;script&gt;
+function myFunction() {
+    var greeting;
+    if (new Date().getHours() &lt; 20) {
+        greeting = "Good day";
+    } else {
+        greeting = "Good evening";
+    }
+    document.getElementById("demo22").innerHTML = greeting;
+}
+&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+					
+			</code>
+		</pre>
+	</td>
+	<td>
+		<p id="demo22"></p>
+			<button onclick="myFunction17()">Try it</button>
+				<script>
+					function myFunction17() {
+					var greeting;
+					if (new Date().getHours() < 20) {
+						greeting = "Good day";
+					} else {
+						greeting = "Good evening";
+						}
+					document.getElementById("demo22").innerHTML = greeting;
+					}
+				</script>
+	</td>
+</tr>
+<tr>
+	<td>
+		<pre>
+			<code>
+				<p>Else if Statement: </p>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+
+&lt;p&gt;Click the button to get a time-based greeting:&lt;/p&gt;
+
+&lt;button onclick="myFunction18()"&gt;Try it&lt;/button&gt;
+
+&lt;p id="demo"&gt;&lt;/p&gt;
+
+&lt;script&gt;
+function myFunction() {
+    var greeting;
+    var time = new Date().getHours();
+    if (time &lt; 10) {
+        greeting = "Good morning";
+    } else if (time &lt; 20) {
+        greeting = "Good day";
+    } else {
+        greeting ="Good evening";
+    }
+document.getElementById("demo23").innerHTML = greeting;
+}
+&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+					
+			</code>
+		</pre>
+	</td>
+	<td>
+		<p id="demo23"></p>
+			<button onclick="myFunction18()">Try it</button>
+				<script>
+					function myFunction18() {
+					var greeting;
+					var time = new Date().getHours();
+					if (time < 10) {
+						greeting = "Good morning";
+					} else if (time < 20) {
+						greeting = "Good day";
+					} else {
+						greeting ="Good evening";
+					}
+					document.getElementById("demo23").innerHTML = greeting;
+					}
+				</script>
+	</td>
+</tr>		
+
+<tr>
+	<td rowspan="3">Switch</td>
+		<td>
+			<pre>
+				<code>
+					<p> JavaScript Switch Statement </p>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+
+&lt;p&gt;Click the button to display what day it is today:&lt;/p&gt;
+
+&lt;button onclick="myFunction19()"&gt;Try it&lt;/button&gt;
+
+&lt;p id="demo"&gt;&lt;/p&gt;
+
+&lt;script&gt;
+function myFunction19() {
+    var day;
+    switch (new Date().getDay()) {
+        case 0:
+            day = "Sunday";
+            break;
+        case 1:
+            day = "Monday";
+            break;
+        case 2:
+            day = "Tuesday";
+            break;
+        case 3:
+            day = "Wednesday";
+            break;
+        case 4:
+            day = "Thursday";
+            break;
+        case 5:
+            day = "Friday";
+            break;
+        case  6:
+            day = "Saturday";
+            break;
+    }
+    document.getElementById("demo24").innerHTML = "Today is " + day;
+}
+&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+					
+				</code>
+			</pre>
+		</td>
+		<td>
+			<p id="demo24"></p>
+				<button onclick="myFunction19()">Try it</button>		
+					<script>
+					function myFunction19() {
+						var day;
+						switch (new Date().getDay()) {
+							case 0:
+								day = "Sunday";
+								break;
+							case 1:
+								day = "Monday";
+								break;
+							case 2:
+								day = "Tuesday";
+								break;
+							case 3:
+								day = "Wednesday";
+								break;
+							case 4:
+								day = "Thursday";
+								break;
+							case 5:
+								day = "Friday";
+								break;
+							case  6:
+								day = "Saturday";
+								break;
+						}
+						document.getElementById("demo24").innerHTML = "Today is " + day;
+					}
+					</script>
+		</td>
+</tr>
+<tr>
+	<td>
+		<pre>
+			<code>
+				<p> The break Keyword: </p>
+&lt;html&gt;
+&lt;body&gt;
+
+&lt;p&gt;Click the button to display a message based on what day it is today:&lt;/p&gt;
+
+&lt;button onclick="myFunction20()"&gt;Try it&lt;/button&gt;
+
+&lt;p id="demo"&gt;&lt;/p&gt;
+
+&lt;script&gt;
+function myFunction20() {
+    var text;
+    switch (new Date().getDay()) {
+        case 6:
+            text = "Today is Saturday";
+            break;
+        case 0:
+            text = "Today is Sunday";
+            break;
+        default:
+            text = "Looking forward to the Weekend";
+    }
+    document.getElementById("demo25").innerHTML = text;
+}
+&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+					
+			</code>
+		</pre>
+	</td>
+	<td>
+		<p id="demo25"></p>
+			<button onclick="myFunction20()">Try it</button>
+				<script>
+				function myFunction20() {
+					var text;
+					switch (new Date().getDay()) {
+						case 6:
+							text = "Today is Saturday";
+							break;
+						case 0:
+							text = "Today is Sunday";
+							break;
+						default:
+							text = "Looking forward to the Weekend";
+					}
+					document.getElementById("demo25").innerHTML = text;
+				}
+				</script>
+	</td>
+</tr>
+			
+<tr>
+	<td>
+		<pre>
+			<code>
+				<p>Common Code and Fall-Through: </p>
+&lt;html&gt;
+&lt;body&gt;
+
+&lt;p&gt;Click the button to display a message based on what day it is:&lt;/p&gt;
+
+&lt;button onclick="myFunction21()"&gt;Try it&lt;/button&gt;
+
+&lt;p id="demo"&gt;&lt;/p&gt;
+
+&lt;script&gt;
+function myFunction21() {
+    var text;
+    switch (new Date().getDay()) {
+        case 1:
+        case 2:
+        case 3:
+        default:
+            text = "Looking forward to the Weekend";
+            break;
+        case 4:
+        case 5:
+            text = "Soon it is Weekend";
+            break;
+        case 0:
+        case 6:
+            text = "It is Weekend";
+    }
+    document.getElementById("demo26").innerHTML = text;
+}
+&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+					
+			</code>
+		</pre>
+	</td>
+	<td>
+		<p id="demo26"></p>
+			<button onclick="myFunction21()">Try it</button>
+			<script>
+				function myFunction21() {
+				var text;
+				switch (new Date().getDay()) {
+					case 1:
+					case 2:
+					case 3:
+					default:
+						text = "Looking forward to the Weekend";
+						break;
+					case 4:
+					case 5:
+						text = "Soon it is Weekend";
+						break;
+					case 0:
+					case 6:
+						text = "It is Weekend";
+				}
+				document.getElementById("demo26").innerHTML = text;
+			}
+			</script>
+	</td>
+</tr>	
+
+<tr>
+	<td rowspan="4">For Loop:</td>
+		<td>
+			<pre>
+				<code>
+					<p> JavaScript Loops: </p>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+
+&lt;p id="demo"&gt;&lt;/p&gt;
+
+&lt;script&gt;
+cars = ["BMW", "Volvo", "Saab", "Ford"];
+text = "";
+var i;
+for (i = 0; i &lt; cars.length; i++) {
+    text += cars[i] + "&lt;br&gt;";
+}
+
+document.getElementById("demo27").innerHTML = text;
+&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+					
+				</code>
+			</pre>
+		</td>
+		<td>
+			<p id="demo27"></p>		
+				<script>
+					cars = ["BMW", "Volvo", "Saab", "Ford"];
+					text = "";
+					var i;
+					for (i = 0; i < cars.length; i++) {
+						text += cars[i] + "<br>";
+					}
+
+					document.getElementById("demo27").innerHTML = text;
+				</script>
+				
+		</td>
+</tr>
+<tr>
+	<td>
+		<pre>
+			<code>
+				<p> Statement 1: </p>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+
+&lt;p id="demo"&gt;&lt;/p&gt;
+
+&lt;script&gt;
+cars = ["BMW", "Volvo", "Saab", "Ford"];
+var i = 2;
+var len = cars.length;
+var text = "";
+
+for (; i &lt; len; i++) {
+    text += cars[i] + "&lt;br&gt;";
+}
+
+document.getElementById("demo28").innerHTML = text;
+&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+
+					
+			</code>
+		</pre>
+	</td>
+	<td>
+		<p id="demo28"></p>
+			<script>
+				cars = ["BMW", "Volvo", "Saab", "Ford"];
+				var i = 2;
+				var len = cars.length;
+				var text = "";
+
+				for (; i < len; i++) {
+					text += cars[i] + "<br>";
+				}
+
+				document.getElementById("demo28").innerHTML = text;
+			</script>
+	</td>
+</tr>
+			
+<tr>
+	<td>
+		<pre>
+			<code>
+				<p>Statement 3: </p>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+
+&lt;p id="demo"&gt;&lt;/p&gt;
+
+&lt;script&gt;
+cars = ["BMW", "Volvo", "Saab", "Ford"];
+
+var i = 0;
+var len = cars.length;
+var text = "";
+
+for (; i &lt; len; ) {
+    text += cars[i] + "&lt;br&gt;";
+    i++;
+}
+document.getElementById("demo29").innerHTML = text;
+&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+			</code>
+		</pre>
+	</td>
+	<td>
+		<p id="demo29"></p>
+			<script>
+				cars = ["BMW", "Volvo", "Saab", "Ford"];
+
+				var i = 0;
+				var len = cars.length;
+				var text = "";
+
+				for (; i < len; ) {
+					text += cars[i] + "<br>";
+					i++;
+				}
+				document.getElementById("demo").innerHTML = text;
+			</script>
+	</td>
+</tr>	
+			
+<tr>
+	<td>
+		<pre>
+			<code>
+				<p>The For/In Loop: </p>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+
+&lt;p id="demo"&gt;&lt;/p&gt;
+
+&lt;script&gt;
+var txt = "";
+var person = {fname:"John", lname:"Doe", age:25}; 
+var x;
+for (x in person) {
+    txt += person[x] + " ";
+}
+document.getElementById("demo30").innerHTML = txt;
+&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+
+			</code>
+		</pre>
+	</td>
+	<td>
+		<p id="demo30"></p>
+		<script>
+			var txt = "";
+			var person = {fname:"John", lname:"Doe", age:25}; 
+			var x;
+			for (x in person) {
+				txt += person[x] + " ";
+			}
+			document.getElementById("demo30").innerHTML = txt;
+		</script>
+			
+	</td>
+</tr>
+
+
+<tr>
+	<td rowspan="2">While Loop:</td>
+		<td>
+			<pre>
+				<code>
+					<p> The While Loop: </p>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+
+&lt;p&gt;Click the button to loop through a block of code as long as i is less than 10.&lt;/p&gt;
+
+&lt;button onclick="myFunction()"&gt;Try it&lt;/button&gt;
+
+&lt;p id="demo"&gt;&lt;/p&gt;
+
+&lt;script&gt;
+function myFunction23() {
+    var text = "";
+    var i = 0;
+    while (i &lt; 10) {
+        text += "&lt;br&gt;The number is " + i;
+        i++;
+    }
+    document.getElementById("demo31").innerHTML = text;
+}
+&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+					
+				</code>
+			</pre>
+	</td>
+		<td>
+			<p id="demo31"></p>	
+			<button onclick="myFunction23()">Try it</button>			
+				<script>
+					function myFunction23() {
+						var text = "";
+						var i = 0;
+						while (i < 10) {
+							text += "<br>The number is " + i;
+							i++;
+						}
+						document.getElementById("demo31").innerHTML = text;
+					}
+				</script>
+				
+		</td>
+</tr>
+<tr>
+	<td>
+		<pre>
+			<code>
+				<p> The Do/While Loop: </p>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+
+&lt;p&gt;Click the button to loop through a block of code as long as i is less than 10.&lt;/p&gt;
+
+&lt;button onclick="myFunction24()"&gt;Try it&lt;/button&gt;
+
+&lt;p id="demo"&gt;&lt;/p&gt;
+
+&lt;script&gt;
+function myFunction24() {
+    var text = ""
+    var i = 0;
+    do {
+        text += "&lt;br&gt;The number is " + i;
+        i++;
+    }
+    while (i &lt; 10)  
+    document.getElementById("demo33").innerHTML = text;
+}
+&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+
+					
+			</code>
+		</pre>
+	</td>
+	<td>
+		<p id="demo33"></p>
+			<script>
+				function myFunction24() {
+				var text = ""
+				var i = 0;
+				do {
+					text += "<br>The number is " + i;
+					i++;
+				}
+				while (i < 10)  
+				document.getElementById("demo33").innerHTML = text;
+			}
+			</script>
+	</td>
+</tr>	
+
+		
+
+
+
+</table>
+</body>
+</html>
